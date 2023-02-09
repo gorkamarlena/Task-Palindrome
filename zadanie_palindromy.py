@@ -1,14 +1,12 @@
-# function which return reverse of a string
-def is_palindrome(value):
-    value = ''.join(value.split())
+x = input('Enter the value: ')
 
-#  update the old value with a new value
-    value = value.replace('.', '')
-  
-  #convert string to lowercase
-    value = value.lower()
-  
-  #reverse the string
-    return value == value[::-1]
+def is_palindrome(text):
+    text = "".join([x for x in text.lower() if x.isalnum()])
+    return text == text[::-1]
 
-print(is_palindrome(input('Enter the value: ')))
+print(is_palindrome(x))
+
+
+
+
+

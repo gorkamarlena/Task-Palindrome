@@ -1,37 +1,14 @@
-"""
-Zadanie: palindromy
-
-Pamiętaj, że wszystkie zadania, które wysyłasz Mentorowi powinny być umieszczone w Twoim zdalnym repozytorium,
-jako osobne projekty. W czasie pracy zapisuj więc kolejne commity i prześlij całość na serwer w serwisie GitHub.
-
-Twoim zadaniem będzie napisanie funkcji, 
-która sprawdza, czy dany wyraz jest palindromem. 
-Palindrom to słowo, które czytane od lewej do prawej i od prawej do lewej brzmi tak samo. Przykłady to “kajak” i “potop”.
-
-Zaprogramuj funkcję, która przyjmuje jeden argument (typu string)
-i zwraca wartość boolean: True/False, mówiącą czy podany tekst jest palindromem.
-
-Podpowiedź
-Pamiętaj, że string/tekst, to kolekcja znaków. 
-Znasz już funkcje kolekcji, które pozwalają odnosić się do elementów indeksowanych od początku
-i od końca.
-
-Do zadania dodaj krótką dokumentację i umieść je w zdalnym repozytorium. Link prześlij Mentorowi.
-
-"""
-
-
 # function which return reverse of a string
- 
-def isPalindrome(x):
-    return x == x[::-1]
- 
- 
-# Driver code
-x = "mar"
-ans = isPalindrome(x)
- 
-if ans:
-    print("True")
-else:
-    print("False")
+def is_palindrome(value):
+    value = ''.join(value.split())
+
+#  update the old value with a new value
+    value = value.replace('.', '')
+  
+  #convert string to lowercase
+    value = value.lower()
+  
+  #reverse the string
+    return value == value[::-1]
+
+print(is_palindrome(input('Enter the value: ')))
